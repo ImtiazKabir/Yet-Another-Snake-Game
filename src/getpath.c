@@ -24,7 +24,7 @@ char *__get_path__(const char *child) {
 
   int t = 0;
   for (int i = 0; i < length; ++i) {
-    if (ex_path[i] == '\\') {
+    if (ex_path[i] == '\\' || ex_path[i] == '/') {
       t = i;
       ex_path[i] = '/';
     }
